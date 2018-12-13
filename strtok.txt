@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<string.h>
+
+void m_strtok(char *str, char *sign);
+
+int main()
+{
+	char snt[80];
+	printf("문장:");
+	scanf("%s[^\n]\n",snt);
+	m_strtok(snt," ");
+	return 0;
+}
+
+void m_strtok(char *str, char *sign)
+{
+	while(*str != '\0')
+	{
+		if(*str == *sign)
+			printf("\n");
+		else
+			printf("%c",*str);
+			str++;
+	}
+	printf("\n");
+}
